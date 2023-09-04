@@ -1,9 +1,9 @@
 name: CI
 on:
   push:
-    branches: [ "GPU" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "GPU" ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
@@ -19,5 +19,3 @@ jobs:
         run: make test
       - name: format
         run: make format
-      - name: deploy
-        run: make deploy
