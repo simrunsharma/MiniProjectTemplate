@@ -1,18 +1,9 @@
 """
-Main cli or app entry point
+some code 
 """
 
-from mylib.calculator import add
-import click
+def mini_subtract(x,y):
+    return x - y 
 
-
-@click.command("add")
-@click.argument("a", type=int)
-@click.argument("b", type=int)
-def add_cli(a, b):
-    click.echo(add(a, b))
-
-
-if __name__ == "__main__":
-    # pylint: disable=no-value-for-parameter
-    add_cli()
+if __name__ == '__main__':
+    print(mini_subtract(1,2))
