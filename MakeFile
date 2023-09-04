@@ -1,21 +1,14 @@
-name: CI
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
+install:
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: install packages
-        run: make install
-      - name: lint
-        run: make lint
-      - name: test
-        run: make test
-      - name: format
-        run: make format
+test:
+	python -m pytest -vv --cov=main test_*.py
+
+format:	
+	black *.py 
+
+lint:
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+		
+all: install lint format test 
