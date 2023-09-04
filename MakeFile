@@ -1,7 +1,8 @@
 install:
+	install:
+	@echo "Installing pip packages..."
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
-
+		pip install -r requirements.txt || (echo "Error: Failed to install packages"; exit 1)
 test:
 	python -m pytest -vv --cov=main test_*.py
 
