@@ -4,7 +4,7 @@
 ## Summary:
 This template was created to create a workflow that incorporates the Continuous Integration and Continuous Deployment automation process. This automation process was utiliized to increase efficiency of the checking and testing of code and make sure we understand the known state of our code at all time. Linting is incorporated in our workflow build to ensure our code is follwing the standard conventions of python.
 
-## Specific Benefits (detailed by [Benefits of CI/CD Workflow](https://www.spiceworks.com/tech/devops/articles/what-is-ci-cd/)
+## Specific Benefits (detailed by [Benefits of CI/CD Workflow])(https://www.spiceworks.com/tech/devops/articles/what-is-ci-cd/)
 
 1. **Higher Efficiency**
    - Automation streamlines development and deployment processes.
